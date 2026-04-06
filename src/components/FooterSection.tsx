@@ -5,15 +5,18 @@ const FooterSection = () => (
     <div className="container-premium">
       <div className="grid md:grid-cols-3 gap-12 mb-12">
         <div>
-          <img
-            src="/logo.webp"
-            alt="Dra. Léia Demétrio"
-            className="h-10 w-auto mb-2"
-            width={160}
-            height={40}
-            decoding="async"
-            loading="lazy"
-          />
+          <picture>
+            <source type="image/avif" srcSet="/logo.avif" />
+            <img
+              src="/logo.webp"
+              alt="Dra. Léia Demétrio"
+              className="h-10 w-auto mb-2"
+              width={160}
+              height={40}
+              decoding="async"
+              loading="lazy"
+            />
+          </picture>
           <p className="font-body text-foreground-muted text-sm">
             Harmonização Facial & Saúde Integrativa
           </p>

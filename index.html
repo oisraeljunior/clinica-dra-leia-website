@@ -5,29 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dra. Léia Demétrio | Harmonização Facial em Florianópolis</title>
     <meta name="description" content="Harmonização facial de alto padrão com resultados naturais e exclusivos. Dra. Léia Demétrio, especialista em Florianópolis.">
+    
+    <link rel="preload" href="/fonts/playfair-display-400.woff2" as="font" type="font/woff2" crossorigin>
+    
     <meta name="author" content="Dra. Léia Demétrio" />
     <link rel="canonical" href="https://draleiademetrio.com.br" />
     
-    <!-- Performance Optimization: Font Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    
-    
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:title" content="Dra. Léia Demétrio | Harmonização Facial em Florianópolis">
-  <meta name="twitter:title" content="Dra. Léia Demétrio | Harmonização Facial em Florianópolis">
-  <meta property="og:description" content="Harmonização facial de alto padrão com resultados naturais e exclusivos. Dra. Léia Demétrio, especialista em Florianópolis.">
-  <meta name="twitter:description" content="Harmonização facial de alto padrão com resultados naturais e exclusivos. Dra. Léia Demétrio, especialista em Florianópolis.">
-  <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6570e4d6-2ecc-4ba9-9fa1-d583d47b2661/id-preview-c28d7b29--508847fc-32ce-40c3-87fc-37ec3bdfc521.lovable.app-1774910368938.png">
-  <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6570e4d6-2ecc-4ba9-9fa1-d583d47b2661/id-preview-c28d7b29--508847fc-32ce-40c3-87fc-37ec3bdfc521.lovable.app-1774910368938.png">
-</head>
+    <style>
+      /* CSS CRÍTICO - START */
+      body {
+        margin: 0;
+        background-color: hsl(20, 28%, 5%);
+        color: hsl(0, 0%, 98%);
+      }
+      .critical-hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      .critical-bg-desktop {
+        position: absolute;
+        inset: 0;
+        display: none;
+      }
+      .critical-bg-mobile {
+        position: absolute;
+        inset: 0;
+        background-color: hsl(20, 28%, 5%);
+      }
+      @media (min-width: 768px) {
+        .critical-bg-desktop { display: block; }
+        .critical-bg-mobile { display: none; }
+      }
+      /* Fim do CSS crítico estritamente necessário para Hero layout size */
+    </style>
+  </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Pré-renderização do Hero para LCP ultra rápido (TBT baixo) -->
+      <section class="critical-hero">
+        <div class="critical-bg-desktop">
+          <picture>
+            <source type="image/avif" srcset="/capa-desktop.avif" />
+            <img src="/capa-desktop.webp" alt="Dra. Léia Demétrio" style="width:100%; height:100%; object-fit:cover; object-position:center;" fetchpriority="high" loading="eager" decoding="sync" />
+          </picture>
+          <div style="position:absolute; inset:0; background: linear-gradient(to right, hsl(20, 28%, 5%), hsla(20, 28%, 5%, 0.8), transparent);"></div>
+        </div>
+        <div class="critical-bg-mobile"></div>
+      </section>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

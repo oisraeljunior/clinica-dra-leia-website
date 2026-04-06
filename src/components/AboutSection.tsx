@@ -1,5 +1,6 @@
 import AnimatedSection from "./AnimatedSection";
 import aboutImage from "@/assets/about-portrait.png";
+import aboutImageAvif from "@/assets/about-portrait.avif";
 
 const AboutSection = () => (
   <section className="section-padding bg-background relative section-glow">
@@ -7,15 +8,18 @@ const AboutSection = () => (
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <AnimatedSection>
           <div className="relative">
-            <img
-              src={aboutImage}
-              alt="Dra. Léia Demétrio"
-              loading="lazy"
-              decoding="async"
-              width={600}
-              height={800}
-              className="w-full h-auto object-contain grayscale-[20%]"
-            />
+            <picture>
+              <source type="image/avif" srcSet={aboutImageAvif} />
+              <img
+                src={aboutImage}
+                alt="Dra. Léia Demétrio"
+                loading="lazy"
+                decoding="async"
+                width={600}
+                height={800}
+                className="w-full h-auto object-contain grayscale-[20%]"
+              />
+            </picture>
             <div className="absolute inset-0 border border-primary/10" />
             <div className="absolute -bottom-4 -right-4 w-full h-full border border-primary/15 -z-10" />
           </div>
